@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="codepalacios" />
+    <meta
+      name="description"
+      content="Lista de tareas sencilla para Curso de JavaScript Desde Cero - Platzi"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/list-circle.svg"
+    />
+
+    <title>Lista de tareas</title>
+
+    <!-- Fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="task-section">
+        <h1 class="task-section__title">Lista de tareas</h1>
+        <form class="task-form" id="taskForm">
+          <input
+            class="task-form__input"
+            id="taskInput"
+            type="text"
+            placeholder="Crear una nueva tarea..."
+          />
+          <button
+            class="task-form__button"
+            aria-label="Crear nueva tarea"
+            type="submit"
+          >
+            <ion-icon class="task-form__icon" name="add-outline"></ion-icon>
+          </button>
+        </form>
+        <article class="task-list">
+          <ul class="task-list__items" id="taskListItems">
+            <!-- Aquí se insertarán las tareas -->
+          </ul>
+          <div class="task-controls">
+            <span class="task-controls__count" id="taskCount"
+              ><!-- Contador de tareas --></span
+            >
+            <button class="task-controls__button" id="showAllButton">
+              Todas
+            </button>
+            <button class="task-controls__button" id="showActiveButton">
+              Activas
+            </button>
+            <button class="task-controls__button" id="showCompletedButton">
+              Completadas
+            </button>
+            <button
+              class="task-controls__button task-controls__button--delete"
+              id="deleteCompletedButton"
+            >
+              Eliminar completadas
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- Script para usar ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
